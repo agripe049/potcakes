@@ -1,24 +1,72 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
+import Dashboard from "./components/pages/Dashboard"
+import Clientes from "./components/pages/Clientes"
+import NovoCliente from "./components/pages/NovoCliente"
+import Produtos from "./components/pages/Produtos"
+import NovoProduto from "./components/pages/NovoProduto"
+import Vendas from "./components/pages/Vendas"
+import NovaVenda from "./components/pages/NovaVenda"
+import Relatorios from "./components/pages/Relatorios"
+import Estoque from "./components/pages/Estoque"
+import Ingredientes from "./components/pages/Ingredientes"
+import NovoIngrediente from "./components/pages/NovoIngrediente"
+
+import Container from "./components/layout/Container"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <ul>
+        <Link to="/">Dashboard</Link>
+        <Link to="/clientes">Clientes</Link>
+        <Link to="/produtos">Produtos</Link>
+        <Link to="/vendas">Vendas</Link>
+        <Link to="/relatorios">Relatórios</Link>
+        <Link to="/estoque">Estoque</Link>
+        <Link to="/ingredientes">Ingredientes</Link>
+      </ul>
+      <Container>
+      <Routes>
+        
+        <Route exact path="/" element={<Dashboard />}>
+        </Route>
+
+        <Route path="/clientes" element={<Clientes />}>
+        </Route>
+
+        <Route path="novocliente" element={<NovoCliente />}>
+        </Route>
+
+        <Route path="/produtos" element={<Produtos />}>
+        </Route>
+
+        <Route path="/novoproduto" element={<NovoProduto />}>
+        </Route>
+
+        <Route path="/vendas" element={<Vendas />}>
+        </Route>
+
+        <Route path="/novavenda" element={<NovaVenda />}>
+        </Route>
+
+        <Route path="/relatorios" element={<Relatorios />}>
+        </Route>
+
+        <Route path="estoque" element={<Estoque />}>
+        </Route>
+
+        <Route path="ingredientes" element={<Ingredientes />}>
+        </Route>
+
+        <Route path="novoingrediente" element={<NovoIngrediente />}>
+        </Route>
+      </Routes>
+      </Container>
+
+
+
+      <p>Footer</p>
+    </Router>
   );
 }
 
