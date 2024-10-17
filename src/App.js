@@ -12,20 +12,15 @@ import Ingredientes from "./components/pages/Ingredientes"
 import NovoIngrediente from "./components/pages/NovoIngrediente"
 
 import Container from "./components/layout/Container"
+import Navbar from './components/layout/Navbar'
+
 
 function App() {
   return (
     <Router>
-      <ul>
-        <Link to="/">Dashboard</Link>
-        <Link to="/clientes">Clientes</Link>
-        <Link to="/produtos">Produtos</Link>
-        <Link to="/vendas">Vendas</Link>
-        <Link to="/relatorios">Relatórios</Link>
-        <Link to="/estoque">Estoque</Link>
-        <Link to="/ingredientes">Ingredientes</Link>
-      </ul>
-      <Container>
+      <Navbar />
+      
+      <Container customClass="min-height">
       <Routes>
         
         <Route exact path="/" element={<Dashboard />}>
@@ -63,9 +58,6 @@ function App() {
       </Routes>
       </Container>
 
-
-
-      <p>Footer</p>
     </Router>
   );
 }
