@@ -1,9 +1,7 @@
 function Dashboard() {
     return(
         <div>
-            <h1>
-                <p></p>
-            </h1>
+            <h1>Filtrar por data</h1>
         </div>
     )
 }

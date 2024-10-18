@@ -9,3 +9,8 @@ html, body, #root {
   background-color: #fff;
   height: 100%;
 }
+
+.main-content {
+  margin-left: 200px;
+  padding: 20px;
+}

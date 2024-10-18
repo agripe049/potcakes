@@ -10,7 +10,7 @@ function Navbar() {
         <nav className={styles.navbar}>
             <Container>
                 <Link to="/">
-                    <img />   
+                    <img  />   
                 </Link>
                 <ul className={styles.list}>
                     <li className={styles.item}>
